@@ -1,0 +1,17 @@
+Netzwerk Projekt
+- 108 Mitarbeiter (54 Designer, 34 Verkäufer, 15 Sekretärin, 5 Buchhalter, 1GL)
+
+2 Standorte (700m Abstand)
+- Designer Gebäude = 54 Personen
+- HQ = 55 Personen
+
+Infrastruktu
+- Pro Gebäude Je 1 Serverraum
+- LWL Verbindung zwischen beiden gebäuden
+- Stockwerkverkabelung 1000 Mb/s
+
+Anforderung
+- Schutz vor Spam
+- VPN für externe (verkäufer mit Notebooks)
+- Daten sind zentral gespeichert
+

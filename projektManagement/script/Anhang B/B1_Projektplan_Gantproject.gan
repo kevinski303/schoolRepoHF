@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Projekt NEPHON" company="" webLink="" view-date="2009-02-16" view-index="0" gantt-divider-location="505" resource-divider-location="338" version="2.0">
+    <description/>
+    <view zooming-state="default:6" id="gantt-chart"/>
+    <view id="resource-table">
+        <field id="0" name="Ressource" width="54" order="0"/>
+        <field id="1" name="Rolle" width="45" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <calendar id="1" name="default">
+                <default-week sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+                <overriden-day-types/>
+                <days/>
+            </calendar>
+        </day-types>
+    </calendars>
+    <tasks color="#99ccff">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Initialisierung" color="#99ccff" meeting="false" start="2009-02-23" duration="10" complete="92" priority="1" expand="true">
+            <task id="6" name="Projektplanung erstellen" color="#99ccff" meeting="false" start="2009-02-23" duration="4" complete="100" priority="1" expand="true">
+                <depend id="8" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="7" name="Projektauftrag erstellen" color="#99ccff" meeting="false" start="2009-02-23" duration="9" complete="100" priority="1" expand="true">
+                <depend id="8" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="8" name="Freigabe Projektauftrag durch Auftraggeber" color="#ff0000" meeting="true" start="2009-03-06" duration="1" complete="0" priority="1" expand="true">
+                <depend id="10" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="1" name="Voranalyse" color="#99ccff" meeting="false" start="2009-03-09" duration="57" complete="9" priority="1" expand="true">
+            <task id="10" name="Anforderungen Benutzer einholen" color="#99ccff" meeting="false" start="2009-03-09" duration="16" complete="50" priority="1" expand="true">
+                <depend id="11" type="2" difference="0" hardness="Strong"/>
+                <depend id="15" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="11" name="Pflichtenheft für Anbieter erstellen" color="#99ccff" meeting="false" start="2009-03-31" duration="5" complete="0" priority="1" expand="true">
+                <depend id="12" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="12" name="Offerten einholen und evalieren" color="#99ccff" meeting="false" start="2009-04-07" duration="20" complete="0" priority="1" expand="true">
+                <depend id="13" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="13" name="Präsentation der Lösungen durch Anbieter" color="#99ccff" meeting="false" start="2009-05-05" duration="3" complete="0" priority="1" expand="true">
+                <depend id="14" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="14" name="Bewertung Lösungen der Anbieter" color="#99ccff" meeting="false" start="2009-05-08" duration="2" complete="0" priority="1" expand="true">
+                <depend id="15" type="2" difference="0" hardness="Rubber"/>
+            </task>
+            <task id="15" name="Vorstudienbericht erstellen" color="#99ccff" meeting="false" start="2009-05-12" duration="10" complete="0" priority="1" expand="true">
+                <depend id="16" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="16" name="Freigabe Vorstudienbericht durch Auftraggeber" color="#ff0000" meeting="true" start="2009-05-26" duration="1" complete="0" priority="1" expand="true">
+                <depend id="9" type="2" difference="0" hardness="Strong"/>
+                <depend id="18" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="2" name="Konzept" color="#99ccff" meeting="false" start="2009-05-27" duration="16" complete="0" priority="1" expand="true">
+            <task id="9" name="LAN / IT Workshop durchführen" color="#99ccff" meeting="false" start="2009-05-27" duration="3" complete="0" priority="1" expand="true">
+                <depend id="17" type="2" difference="0" hardness="Strong"/>
+                <depend id="20" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="18" name="Benutzer Workshops durchführen für Userprofile" color="#99ccff" meeting="false" start="2009-05-27" duration="5" complete="0" priority="1" expand="true">
+                <depend id="17" type="2" difference="0" hardness="Strong"/>
+                <depend id="20" type="2" difference="0" hardness="Strong"/>
+                <depend id="24" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="17" name="Erstellung der Detailkonzepte" color="#99ccff" meeting="false" start="2009-06-03" duration="5" complete="0" priority="1" expand="true">
+                <depend id="19" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="20" name="Erstellung Testkonzepte für Abnahme" color="#99ccff" meeting="false" start="2009-06-03" duration="3" complete="0" priority="1" expand="true">
+                <depend id="19" type="2" difference="0" hardness="Strong"/>
+                <depend id="21" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="24" name="Erstellung der Schulungsunterlagen" color="#99ccff" meeting="false" start="2009-06-03" duration="10" complete="0" priority="1" expand="true">
+                <depend id="21" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="19" name="Hauptstudienbericht erstellen" color="#99ccff" meeting="false" start="2009-06-10" duration="5" complete="0" priority="1" expand="true">
+                <depend id="21" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="21" name="Freigabe Hauptstudienbericht durch Auftraggeber" color="#ff0000" meeting="true" start="2009-06-17" duration="1" complete="0" priority="1" expand="true">
+                <depend id="22" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="3" name="Realisierung" color="#99ccff" meeting="false" start="2009-06-18" duration="16" complete="0" priority="1" expand="true">
+            <task id="22" name="Durchführung der Anpassungen am LAN für VoIP" color="#99ccff" meeting="false" start="2009-06-18" duration="5" complete="0" priority="1" expand="true">
+                <depend id="23" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="23" name="Installation der Call Manager und Voicegateways" color="#99ccff" meeting="false" start="2009-06-25" duration="3" complete="0" priority="1" expand="true">
+                <depend id="25" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="25" name="Erstellung der Schulungsinfrastruktur" color="#99ccff" meeting="false" start="2009-06-30" duration="2" complete="0" priority="1" expand="true">
+                <depend id="26" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="26" name="Abnahme Systemfunktionen und Benutzerfunktionen" color="#99ccff" meeting="false" start="2009-07-02" duration="5" complete="0" priority="1" expand="true">
+                <depend id="34" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="34" name="Freigabe zur Einführung durch Auftraggeber" color="#ff0000" meeting="true" start="2009-07-09" duration="1" complete="0" priority="1" expand="true">
+                <depend id="27" type="2" difference="0" hardness="Strong"/>
+                <depend id="28" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="4" name="Einführung" color="#99ccff" meeting="false" start="2009-07-10" duration="6" complete="0" priority="1" expand="true">
+            <task id="27" name="Schulung der Mitarbeiter" color="#99ccff" meeting="false" start="2009-07-10" duration="2" complete="0" priority="1" expand="true">
+                <depend id="29" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="28" name="Installation der IP Phones" color="#99ccff" meeting="false" start="2009-07-10" duration="5" complete="0" priority="1" expand="true">
+                <depend id="29" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="29" name="Migration der bestehenden Amtsanschlüsse auf das neue System" color="#99ccff" meeting="false" start="2009-07-17" duration="1" complete="0" priority="1" expand="true">
+                <depend id="31" type="2" difference="0" hardness="Strong"/>
+                <depend id="32" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="5" name="Projektabschluss" color="#99ccff" meeting="false" start="2009-07-20" duration="5" complete="0" priority="1" expand="true">
+            <task id="31" name="Update Projektcontrolling" color="#99ccff" meeting="false" start="2009-07-20" duration="2" complete="0" priority="1" expand="true"/>
+            <task id="32" name="Erstellung des Abschlussberichtes" color="#99ccff" meeting="false" start="2009-07-20" duration="3" complete="0" priority="1" expand="true">
+                <depend id="30" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="30" name="Review Meeting" color="#99ccff" meeting="false" start="2009-07-23" duration="1" complete="0" priority="1" expand="true">
+                <depend id="33" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="33" name="Auflösung der Projektorganisation durch Auftraggeber" color="#ff0000" meeting="true" start="2009-07-24" duration="1" complete="0" priority="1" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="5" name="Aeby Marc" function="Default:1" contacts="" phone=""/>
+        <resource id="6" name="Merz" function="1" contacts="" phone=""/>
+        <resource id="7" name="Calmy-Rey" function="2" contacts="" phone=""/>
+        <resource id="8" name="Leuenberger" function="0" contacts="" phone=""/>
+        <resource id="9" name="Couchepin" function="0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="6" resource-id="5" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="7" resource-id="5" function="Default:1" responsible="true" load="20.0"/>
+        <allocation task-id="7" resource-id="7" function="2" responsible="false" load="100.0"/>
+        <allocation task-id="8" resource-id="6" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="10" resource-id="8" function="0" responsible="true" load="50.0"/>
+        <allocation task-id="10" resource-id="9" function="0" responsible="false" load="50.0"/>
+        <allocation task-id="11" resource-id="5" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="11" resource-id="7" function="2" responsible="false" load="50.0"/>
+        <allocation task-id="12" resource-id="5" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="13" resource-id="5" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="13" resource-id="8" function="0" responsible="false" load="100.0"/>
+        <allocation task-id="13" resource-id="9" function="0" responsible="false" load="100.0"/>
+        <allocation task-id="14" resource-id="5" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="14" resource-id="8" function="0" responsible="false" load="100.0"/>
+        <allocation task-id="15" resource-id="7" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="16" resource-id="6" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="9" resource-id="8" function="0" responsible="true" load="100.0"/>
+        <allocation task-id="9" resource-id="9" function="0" responsible="false" load="100.0"/>
+        <allocation task-id="18" resource-id="7" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="17" resource-id="5" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="20" resource-id="8" function="0" responsible="true" load="100.0"/>
+        <allocation task-id="24" resource-id="9" function="0" responsible="false" load="100.0"/>
+        <allocation task-id="24" resource-id="7" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="19" resource-id="7" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="21" resource-id="5" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="22" resource-id="9" function="0" responsible="true" load="100.0"/>
+        <allocation task-id="23" resource-id="8" function="0" responsible="true" load="100.0"/>
+        <allocation task-id="25" resource-id="8" function="0" responsible="true" load="100.0"/>
+        <allocation task-id="26" resource-id="5" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="34" resource-id="6" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="27" resource-id="7" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="28" resource-id="8" function="0" responsible="true" load="100.0"/>
+        <allocation task-id="29" resource-id="8" function="0" responsible="true" load="100.0"/>
+        <allocation task-id="31" resource-id="5" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="32" resource-id="5" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="32" resource-id="7" function="2" responsible="false" load="100.0"/>
+        <allocation task-id="30" resource-id="5" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="30" resource-id="8" function="0" responsible="false" load="100.0"/>
+        <allocation task-id="30" resource-id="9" function="0" responsible="false" load="100.0"/>
+        <allocation task-id="30" resource-id="6" function="1" responsible="false" load="100.0"/>
+        <allocation task-id="30" resource-id="7" function="2" responsible="false" load="100.0"/>
+        <allocation task-id="33" resource-id="6" function="1" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <taskdisplaycolumns>
+        <displaycolumn property-id="tpd3" order="0" width="230"/>
+        <displaycolumn property-id="tpd4" order="1" width="66"/>
+        <displaycolumn property-id="tpd5" order="2" width="54"/>
+        <displaycolumn property-id="tpd8" order="3" width="100"/>
+    </taskdisplaycolumns>
+    <previous>
+        <previous-tasks name="Speichern_1">
+            <previous-task id="0" start="2009-02-23" duration="10" meeting="false" super="true"/>
+            <previous-task id="6" start="2009-02-23" duration="4" meeting="false" super="false"/>
+            <previous-task id="7" start="2009-02-23" duration="9" meeting="false" super="false"/>
+            <previous-task id="8" start="2009-03-06" duration="1" meeting="true" super="false"/>
+            <previous-task id="1" start="2009-03-09" duration="51" meeting="false" super="true"/>
+            <previous-task id="10" start="2009-03-09" duration="10" meeting="false" super="false"/>
+            <previous-task id="11" start="2009-03-23" duration="5" meeting="false" super="false"/>
+            <previous-task id="12" start="2009-03-30" duration="20" meeting="false" super="false"/>
+            <previous-task id="13" start="2009-04-27" duration="3" meeting="false" super="false"/>
+            <previous-task id="14" start="2009-04-30" duration="2" meeting="false" super="false"/>
+            <previous-task id="15" start="2009-05-04" duration="10" meeting="false" super="false"/>
+            <previous-task id="16" start="2009-05-18" duration="1" meeting="true" super="false"/>
+            <previous-task id="2" start="2009-05-19" duration="16" meeting="false" super="true"/>
+            <previous-task id="9" start="2009-05-19" duration="3" meeting="false" super="false"/>
+            <previous-task id="18" start="2009-05-19" duration="5" meeting="false" super="false"/>
+            <previous-task id="17" start="2009-05-26" duration="5" meeting="false" super="false"/>
+            <previous-task id="20" start="2009-05-26" duration="3" meeting="false" super="false"/>
+            <previous-task id="24" start="2009-05-26" duration="10" meeting="false" super="false"/>
+            <previous-task id="19" start="2009-06-02" duration="5" meeting="false" super="false"/>
+            <previous-task id="21" start="2009-06-09" duration="1" meeting="true" super="false"/>
+            <previous-task id="3" start="2009-06-10" duration="16" meeting="false" super="true"/>
+            <previous-task id="22" start="2009-06-10" duration="5" meeting="false" super="false"/>
+            <previous-task id="23" start="2009-06-17" duration="3" meeting="false" super="false"/>
+            <previous-task id="25" start="2009-06-22" duration="2" meeting="false" super="false"/>
+            <previous-task id="26" start="2009-06-24" duration="5" meeting="false" super="false"/>
+            <previous-task id="34" start="2009-07-01" duration="1" meeting="true" super="false"/>
+            <previous-task id="4" start="2009-07-02" duration="6" meeting="false" super="true"/>
+            <previous-task id="27" start="2009-07-02" duration="2" meeting="false" super="false"/>
+            <previous-task id="28" start="2009-07-02" duration="5" meeting="false" super="false"/>
+            <previous-task id="29" start="2009-07-09" duration="1" meeting="false" super="false"/>
+            <previous-task id="5" start="2009-07-10" duration="5" meeting="false" super="true"/>
+            <previous-task id="31" start="2009-07-10" duration="2" meeting="false" super="false"/>
+            <previous-task id="32" start="2009-07-10" duration="3" meeting="false" super="false"/>
+            <previous-task id="30" start="2009-07-15" duration="1" meeting="false" super="false"/>
+            <previous-task id="33" start="2009-07-16" duration="1" meeting="true" super="false"/>
+        </previous-tasks>
+    </previous>
+    <roles roleset-name="Default"/>
+    <roles>
+        <role id="0" name="Projektmitarbeiter"/>
+        <role id="1" name="Auftraggeber"/>
+        <role id="2" name="Projekt Office"/>
+    </roles>
+</project>

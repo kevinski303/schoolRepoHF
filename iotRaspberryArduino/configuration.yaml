@@ -1,0 +1,228 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: "All"
+  # Location required to calculate the time the sun rises and sets
+  latitude: 46.92483052
+  longitude: 7.43142955
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 635
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Zurich
+
+
+  #Customize
+  customize:
+   #Weather Sensors Current
+   sensor.yweather_current:
+    friendly_name: "Current condition:"
+   sensor.yweather_temperature:
+    friendly_name: "Current temperature:"
+   #Weather Sensor Tomorrow
+   sensor.yw_day1_condition:
+    friendly_name: "Condition:"
+   sensor.yw_day1_temperature_max:
+    friendly_name: "Max Temperature:"
+   sensor.yw_day1_temperature_min:
+    friendly_name: "Min Temprature:"
+   #Weather Sensor Day after tomorrow
+   sensor.yw_day2_condition:
+    friendly_name: "Condition:"
+   sensor.yw_day2_temperature_max:
+    friendly_name: "Max Temperature:"
+   sensor.yw_day2_temperature_min:
+    friendly_name: "Min Temprature:"
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: geheim
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+
+#suntracker
+sun:
+
+#sensor
+sensor:
+  - platform: moon
+  - platform: yweather
+    woeid: 12891577
+    monitored_conditions:
+    - weather
+    - weather_current
+    - temp_min
+    - temp_max
+    - wind_speed
+    - pressure
+    - visibility
+    - humidity
+    - temperature
+  - platform: yweather
+    forecast: 1
+    name: yw_day1
+    monitored_conditions:
+      - weather
+      - temp_min
+      - temp_max
+  - platform: yweather
+    forecast: 2
+    name: yw_day2
+    monitored_conditions:
+      - weather
+      - temp_min
+      - temp_max
+  - platform: yweather
+    forecast: 3
+    name: yw_day3
+    monitored_conditions:
+      - weather
+      - temp_min
+      - temp_max
+
+#switch
+switch:
+  - platform: wake_on_lan
+    mac_address: "70-4D-7B-6F-3D-AF"
+    name: Main Computer
+    host: 192.168.1.118
+  - platform: wake_on_lan
+    mac_address: "00-11-32-48-EF-1F"
+    name: Network Storage
+    host: 192.168.1.104
+  - platform: mystrom
+    name: "Power Switch"
+    host: 192.168.1.145
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+
+#Input
+#input_select:
+#    presence:
+#        name: Presence
+#        options:
+#            - Home
+#            - Away
+
+
+# hue
+light:
+  platform: hue
+  host: 192.168.1.142
+
+#camera
+camera:
+  - platform: synology
+    url: http://192.168.1.104:7000/
+    username: user
+    password: geheim
+#  - platform: mjpeg
+#    mjpeg_url: http://admin:passwordinbase64@192.168.1.126:8080/stream/video/mjpeg
+#  - platform: ffmpeg
+#    input: -i /dev/video0
+
+#Tracker
+device_tracker:
+  - platform: swisscom
+
+#IFTTT
+ifttt:
+  key: https://maker.ifttt.com/use/--key
+
+###GROUPS
+group:
+ bedroomlights:
+  name: "All Light's"
+  entities:
+   - light.bedroom
+ ceilinglights:
+  name: "Ceiling Light"
+  entities:
+   - light.hue_color_spot_1
+   - light.hue_color_spot_2
+   - light.hue_color_spot_3
+ lightstrips:
+  name: "Lightstrip's"
+  entities:
+   - light.hue_lightstrip_1
+   - light.hue_lightstrip_plus_1
+ networkdeviceswitches:
+  name: "Wake all devices up"
+  entities:
+   - switch.main_computer
+   - switch.network_storage
+ weathertoday:
+  name: "Today"
+  entities:
+  - sensor.yweather_current
+  - sensor.yweather_temperature
+ weathertomorrow:
+  name: "Tomorrow"
+  entities:
+  - sensor.yw_day1_condition
+  - sensor.yw_day1_temperature_max
+  - sensor.yw_day1_temperature_min
+ weatherdayaftertomorrow:
+  name: "Day after tomorrow"
+  entities:
+  - sensor.yw_day2_condition
+  - sensor.yw_day2_temperature_max
+  - sensor.yw_day2_temperature_min
+ powerswitch:
+  name: "Power Cam On/Off"
+  entities:
+  - switch.power_switch
+####VIEWS
+ Beleuchtung:
+  view: yes
+  name: "Light's"
+  entities:
+   - group.ceilinglights
+   - group.lightstrips
+ wolswitch:
+  view: yes
+  name: "Wake on Lan"
+  entities:
+   - group.networkdeviceswitches
+ camerastream:
+  view: yes
+  name: "Camera Stream"
+  entities:
+   - camera.nc250
+   - group.powerswitch
+ weatherview:
+  view: yes
+  name: "Weather"
+  entities:
+   - group.weathertoday
+   - group.weathertomorrow
+   - group.weatherdayaftertomorrow
+
+automation: !include automations.yaml
