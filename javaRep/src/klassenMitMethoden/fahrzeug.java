@@ -18,7 +18,7 @@ public class fahrzeug {
 	
 	// Mittels dieser Methode kann das Fahrzeug nun betankt werden
 	void betanken(int mengeBenzin) { //dabei muss uns der wert menge als INT übergeben werden
-		fuellStand=fuellStand+mengeBenzin; //dannach addieren wir die menge zum gegebenen fuellstand  (füllstand wird zu füllstand plus menge)
+		fuellStand=fuellStand+mengeBenzin; //dannach addieren wir die menge zum gegebenen fuellstand (füllstand wird zu füllstand plus menge)
 		
 	}
 	
